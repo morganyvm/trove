@@ -718,6 +718,14 @@ percona_opts = [
                help='Character length of generated passwords.',
                deprecated_name='default_password_length',
                deprecated_group='DEFAULT'),
+    cfg.StrOpt(
+        'docker_image', default='percona',
+        help='Database docker image.'
+    ),
+    cfg.StrOpt(
+        'backup_docker_image', default='openstacktrove/db-backup-mysql:1.1.0',
+        help='The docker image used for backup and restore.'
+    ),
 ]
 
 # Percona XtraDB Cluster
